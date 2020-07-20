@@ -138,9 +138,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_ui"
-                    android:text="LoginPhone"
+                    android:text="Login Phone"
                     android:fontFamily="@font/ice"
-
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite" />
             </RelativeLayout>

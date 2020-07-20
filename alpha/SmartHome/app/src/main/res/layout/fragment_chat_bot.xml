@@ -3,15 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.chatbot.ChatBotFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/chatbot"
-        android:textSize="30sp">
-    </TextView>
+        android:layout_height="500dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:elevation="10dp"
+            app:strokeColor="@color/colorBlack"
+            app:strokeWidth="1dp"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                android:src="@drawable/chatbot"/>
+            <TextView
+                android:id="@+id/text_chatbot"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:hint="chatbot"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/robotomedium"
+                android:layout_marginStart="15dp"
+                />
+
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="370dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="2dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Chat"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </FrameLayout>

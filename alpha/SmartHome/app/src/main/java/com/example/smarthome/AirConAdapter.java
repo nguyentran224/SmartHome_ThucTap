@@ -72,7 +72,7 @@ public class AirConAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         final DataAirCon dataAirCon = dataAirCons.get(position);
-        holder.temparatureI.setText(dataAirCon.getTenmaylanh());
+        holder.tenmaylanhI.setText(dataAirCon.getTenmaylanh());
 
         holder.buttonPowerI.setOnClickListener(new View.OnClickListener() {
             @Override

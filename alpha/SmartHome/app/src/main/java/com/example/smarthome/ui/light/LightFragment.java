@@ -5,10 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.smarthome.DataLight;
 import com.example.smarthome.R;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,7 +32,11 @@ public class LightFragment extends Fragment {
     private String mParam2;
     ImageView imagelight;
     boolean tempbongden = false;
+    View view;
 
+    ListView listView;
+    ArrayList<DataLight> dataLight;
+    ImageView daucong;
     public LightFragment() {
         // Required empty public constructor
     }
@@ -65,7 +73,16 @@ public class LightFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_light, container, false);
+        view = inflater.inflate(R.layout.fragment_light, container, false);
+        listView = (ListView) view.findViewById(R.id.listview);
+        daucong = (ImageView) view.findViewById(R.id.daucong);
+
+//        lightcontrol();
+        return view;
+        //return inflater.inflate(R.layout.fragment_light, container, false);
+    }
+
+    private void lightcontrol(){
         imagelight = view.findViewById(R.id.image_light);
 
         imagelight.setOnClickListener(new View.OnClickListener() {
@@ -83,12 +100,7 @@ public class LightFragment extends Fragment {
 
 
             }
-
-
-
         });
 
-        return view;
-        //return inflater.inflate(R.layout.fragment_light, container, false);
     }
 }

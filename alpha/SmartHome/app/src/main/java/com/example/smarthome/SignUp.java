@@ -190,6 +190,10 @@ public class SignUp extends AppCompatActivity {
         reference.child("control").child("device_5").setValue(i);
         reference.child("control").child("device_6").setValue(i);
 
+
+
+
+
         Toast.makeText(this, "Register Success !", Toast.LENGTH_SHORT).show();
         sendToLogin();
     }

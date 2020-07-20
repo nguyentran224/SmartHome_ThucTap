@@ -1,5 +1,6 @@
 package com.example.smarthome;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -23,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -68,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                     layout_tab.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
                     load_fragment_bottom(new ChatBotFragment());
-
                     return true;
                 case R.id.profile:
                     //layout_tab.setVisibility(View.GONE);
@@ -77,15 +78,13 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment = new ProfileFragment();
                     user_PhoneNo = getIntent().getExtras().get("phoneNo").toString();
                     reference = FirebaseDatabase.getInstance().getReference(user_PhoneNo);
-
                     Bundle bundle = new Bundle();
                     bundle.putString("key", user_PhoneNo);
-
                     selectedFragment.setArguments(bundle);
                     //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                     getSupportFragmentManager().beginTransaction().replace(R.id.layout_frame,selectedFragment).commit();
-                    //return true;
-                    break;
+                    return true;
+                    //break;
 
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.layout_frame,selectedFragment).commit();
@@ -143,6 +142,30 @@ public class MainActivity extends AppCompatActivity {
         load_fragment_bottom(new ControlFragment());
         runaddcontrol();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        //Yes
+        builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+               finish();
+            }
+        });
+
+        //No
+        builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.setMessage("Bạn có chắc chắn thoát ?");
+        builder.create().show();
     }
 
     Boolean load_fragment_bottom(Fragment fragment){

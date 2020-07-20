@@ -41,6 +41,7 @@ dependencies {
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
     implementation 'com.google.firebase:firebase-database:19.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
 }
