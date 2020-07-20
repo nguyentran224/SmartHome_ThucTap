@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="220dp"
+        android:background="@drawable/customborder"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/temparatureI"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:textSize="40dp"
+                    android:hint="Celcius"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp" />
+
+                <TextView
+                    android:id="@+id/tenmaylanhI"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:text="Máy lạnh 1"
+                    android:textSize="15dp"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:id="@+id/increaseTempI"
+                        android:layout_width="110dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/tangicon2" />
+
+                    <ImageView
+                        android:id="@+id/buttonPowerI"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/powerbutton" />
+
+                    <ImageView
+                        android:id="@+id/decreaseTempI"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/giamicon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="70dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/texttangI"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="Tăng"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/statusI"
+                        android:layout_width="110dp"
+                        android:layout_height="30dp"
+                        android:hint="Status"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textgiamI"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="Giảm"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
