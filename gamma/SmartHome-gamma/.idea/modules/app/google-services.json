@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965753688977",
+    "firebase_url": "https://homeequipment-553c7.firebaseio.com",
+    "project_id": "homeequipment-553c7",
+    "storage_bucket": "homeequipment-553c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965753688977:android:39334c3452767573b64030",
+        "android_client_info": {
+          "package_name": "com.example.smarthome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965753688977-q8f8u0qau4a87a76du698bqjbfqf5t6o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smarthome",
+            "certificate_hash": "2215a0812041df6d2bc9f52446b346eb0453ab62"
+          }
+        },
+        {
+          "client_id": "965753688977-88i32150njg8qhv91itnnsnrc86r1rbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5q2nMV9zcV32CtGWekKbWvOZs8vn4uG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965753688977-88i32150njg8qhv91itnnsnrc86r1rbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
