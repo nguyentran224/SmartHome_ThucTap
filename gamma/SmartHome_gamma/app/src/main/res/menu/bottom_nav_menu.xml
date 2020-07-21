@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/control"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/control" />
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/camera" />
+    <item
+        android:id="@+id/chatbot"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/chatbot" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/profile" />
+
+</menu>
